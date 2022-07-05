@@ -14,7 +14,8 @@
 
 ### Archivos del repositorio
 
-- VGG_TF.ipynb: notebook del modelo basado en VGG16
+- VGG_TF.ipynb: notebook del modelo basado en VGG16.
+- README.md: archivo README del proyecto.
 
 ### Sobre este repositorio
 
