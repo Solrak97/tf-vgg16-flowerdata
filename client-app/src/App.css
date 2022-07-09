@@ -1,38 +1,130 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light+Two&display=swap");
+* {
+  font-family: "Architects Daughter", cursive;
+}
+body {
+  background-color: #b3dee5;
+}
+.app {
+  display: block;
   text-align: center;
+  height: 95vh;
+}
+img {
+  border: 10px solid whitesmoke;
+}
+.profile {
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.background {
+  background-color: #b3dee5;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(24, 22, 22);
+}
+.app-link {
+  color: #b3dee5;
 }
 
-.App-link {
-  color: #61dafb;
+.icons-list {
+  position: flex;
+  display: inline-block;
+  width: 100%;
+  background-color: black;
+  height: 7vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer {
+  background-color: black;
+  height: 7vh;
+  width: 100%;
+}
+
+.social-media-list {
+  display: flex;
+  border: 1px solid transparent;
+  border-bottom: none;
+  /* position: relative; */
+  list-style: none;
+  padding: 3px;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  /* margin-inline-start: 25%; */
+}
+
+.h3-text {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  padding-top: 0px;
+}
+.h4-text {
+  padding-top: 0px;
+  margin-top: 0px;
+  color: rgb(40, 7, 82);
+}
+.app-logo {
+  background-size: cover;
+  display: block;
+  border-radius: 1000px;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  width: 30vh;
+  height: 30vh;
+  margin-top: 5vh;
+}
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-title {
+  font-size: 4rem;
+}
+
+.rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-family: monospace;
+}
+.rainbow_text_animated {
+  background: linear-gradient(
+    to right,
+    #6666ff,
+    #0099ff,
+    #00ff00,
+    #ff3399,
+    #6666ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    background-position: 100% 0;
   }
+}
+
+screen-height {
+  height: 100vh;
 }
