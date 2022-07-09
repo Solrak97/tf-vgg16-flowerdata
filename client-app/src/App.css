@@ -8,7 +8,8 @@ body {
 .app {
   display: block;
   text-align: center;
-  height: 95vh;
+  /* height: 100vh; */
+  padding-bottom: 7vh;
 }
 img {
   border: 10px solid whitesmoke;
@@ -46,6 +47,8 @@ img {
   background-color: black;
   height: 7vh;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .social-media-list {
@@ -91,8 +94,13 @@ ul.no-bullets {
 
 .main-title {
   font-size: 4rem;
+  margin: 0 auto;
+  padding-top: 1rem;
 }
-
+.slogan {
+  margin: 0 auto;
+  padding: 1rem;
+}
 .rainbow {
   text-align: center;
   text-decoration: underline;

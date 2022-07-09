@@ -1,6 +1,6 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Header from "./Header";
+import Home from "./Home";
 import "../Tabs.css";
 import AboutMe from "../components/AboutMe";
 import Gallery from "./Gallery";
@@ -12,11 +12,11 @@ function HomeTabs() {
       <Tabs>
         <TabList>
           <Tab>Inicio</Tab>
-          <Tab>Sobre el proyecto</Tab>
+          <Tab>¿Cómo funciona?</Tab>
           <Tab>Participantes</Tab>
         </TabList>
         <TabPanel>
-          <Header />
+          <Home />
         </TabPanel>
         <TabPanel>
           <AboutMe />

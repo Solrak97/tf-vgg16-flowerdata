@@ -5,12 +5,11 @@ function Banner() {
   return (
     <div className="background">
       <h1 className="main-title rainbow rainbow_text_animated">
-        {" "}
-        ¡Bienvenido a PlantBank!{" "}
+        ¡Bienvenido a PlantBank!
       </h1>
-      <h2 className="h4-text">
+      <h3 className="slogan">
         El sitio web que te permite clasificar tipos de plantas
-      </h2>
+      </h3>
     </div>
   );
 }
