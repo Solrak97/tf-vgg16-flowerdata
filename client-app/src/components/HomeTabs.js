@@ -2,9 +2,8 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Home from "./Home";
 import "../Tabs.css";
-import AboutMe from "../components/AboutMe";
-import Gallery from "./Gallery";
-import Participants from "./Participants";
+import About from "../components/About";
+import HowItWorks from "./HowItWorks";
 
 function HomeTabs() {
   return (
@@ -13,16 +12,16 @@ function HomeTabs() {
         <TabList>
           <Tab>Inicio</Tab>
           <Tab>¿Cómo funciona?</Tab>
-          <Tab>Participantes</Tab>
+          <Tab>Sobre el proyecto</Tab>
         </TabList>
-        <TabPanel>
+        <TabPanel style={{marginTop:'3rem'}}>
           <Home />
         </TabPanel>
-        <TabPanel>
-          <AboutMe />
+        <TabPanel style={{marginTop:'3rem'}}>
+          <HowItWorks />
         </TabPanel>
-        <TabPanel>
-          <Participants />
+        <TabPanel style={{marginTop:'3rem'}}>
+          <About />
         </TabPanel>
       </Tabs>
     </div>

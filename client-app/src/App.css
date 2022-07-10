@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light+Two&display=swap");
-* {
-  font-family: "Architects Daughter", cursive;
+/* @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light+Two&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Nobile&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+body{
+  font-family: "Lato", sans-serif !important;
 }
 body {
   background-color: #b3dee5;
+  color:rgb(51, 49, 49);
 }
 .app {
   display: block;
@@ -47,8 +50,8 @@ img {
   background-color: black;
   height: 7vh;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: relative;
+  bottom: 0; */
 }
 
 .social-media-list {
@@ -95,11 +98,13 @@ ul.no-bullets {
 .main-title {
   font-size: 4rem;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 .slogan {
   margin: 0 auto;
   padding: 1rem;
+  padding-bottom: 3rem;
+  font-size: 2rem;
 }
 .rainbow {
   text-align: center;
@@ -135,4 +140,32 @@ ul.no-bullets {
 
 screen-height {
   height: 100vh;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 200px;
+  /* object-fit: contain; */
+  border: none;
+  margin: 1rem;
+  /* border: 2px solid #11060c; */
+}
+
+.zoom {
+  transition: transform 0.2s;
+}
+.zoom:hover {
+  transform: scale(1.1);
+}
+.participants-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about-container {
+  padding: 0 18rem;
+}
+p {
+  text-align: left;
 }
