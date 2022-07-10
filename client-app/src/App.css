@@ -1,18 +1,32 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light+Two&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Nobile&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
-body{
-  font-family: "Lato", sans-serif !important;
-}
+
 body {
   background-color: #b3dee5;
   color:rgb(51, 49, 49);
+  min-height: 100vh;
+  font-family: "Lato", sans-serif !important;
+  position: relative;
 }
+
+body::after {
+  content: '';
+  display: block;
+  height: 5vh;
+}
+
+.footer {
+  background-color: black;
+  height: 5vh;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
 .app {
   display: block;
   text-align: center;
-  /* height: 100vh; */
-  padding-bottom: 7vh;
 }
 img {
   border: 10px solid whitesmoke;
@@ -44,14 +58,6 @@ img {
   width: 100%;
   background-color: black;
   height: 7vh;
-}
-
-.footer {
-  background-color: black;
-  height: 7vh;
-  width: 100%;
-  /* position: relative;
-  bottom: 0; */
 }
 
 .social-media-list {
@@ -138,9 +144,9 @@ ul.no-bullets {
   }
 }
 
-screen-height {
+/* screen-height {
   height: 100vh;
-}
+} */
 
 .avatar {
   border-radius: 50%;
