@@ -4,7 +4,7 @@ import Participants from "./Participants";
 
 function About() {
   return (
-    <div class="about-container">
+    <div className="about-container">
       <h1>Sobre el proyecto</h1>
       <p>
         Este proyecto forma parte de un trabajo del curso CI-0163 Análisis de
