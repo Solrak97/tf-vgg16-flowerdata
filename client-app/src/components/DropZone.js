@@ -57,9 +57,7 @@ function DropZone({setResult, setImageUploaded}) {
           onDelete={onDelete}
           onSee={handleSee}
           localization={"ES-es"}
-          resultOnTooltip
           preview
-          info
           hd
         />
       ))}
