@@ -2,6 +2,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Nobile&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
+
 body {
   background-color: #b3dee5;
   color:rgb(51, 49, 49);
@@ -28,9 +29,9 @@ body::after {
   display: block;
   text-align: center;
 }
-img {
+/* img {
   border: 10px solid whitesmoke;
-}
+} */
 .profile {
   vertical-align: middle;
   width: 250px;

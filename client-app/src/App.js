@@ -12,7 +12,7 @@ function App() {
         <HomeTabs />
       </div>
       <div className="icons-List">
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
