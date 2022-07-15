@@ -11,6 +11,7 @@ function App() {
         <Banner />
         <HomeTabs />
       </div>
+
       <div className="icons-List">
         {/* <Footer /> */}
       </div>

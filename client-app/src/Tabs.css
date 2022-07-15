@@ -4,11 +4,11 @@
 }
 
 .react-tabs__tab-list {
-  border-bottom: 1px solid #aaa;
+  /* border-bottom: 1px solid #aaa; */
   margin: 0 0 10px;
   padding: 0;
-  background-color: #11060c;
-  color: rgb(224, 216, 216);
+  background-color: #38ac875b;
+  color: rgb(61, 61, 61);
 }
 
 .react-tabs__tab {
@@ -23,9 +23,9 @@
 }
 
 .react-tabs__tab--selected {
-  background: #ffa101;
+  background: #216650c0;
   /* border-color: #aaa; */
-  color: black;
+  color: rgb(250, 252, 251);
   /* border-radius: 5px 5px 0 0; */
 }
 
@@ -44,17 +44,17 @@
 }
 
 .card-border {
-  border: solid 5px rgb(40, 7, 82);
+  /* border: solid 5px rgb(40, 7, 82); */
   color: "black";
   width: 20%;
   height: 30vh;
   max-height: 35vh;
   overflow-y: auto;
-  background-color: rgb(224, 216, 216);
+  /* background-color: rgb(224, 216, 216); */
   border-radius: 8;
   position: relative;
   display: -webkit-inline-flex;
-  box-shadow: 10px 10px #d6dbda;
+  /* box-shadow: 10px 10px #d6dbda; */
   margin-inline-start: 30px;
   margin-top: 4vh;
 }
