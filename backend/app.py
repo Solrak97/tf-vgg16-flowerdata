@@ -17,10 +17,11 @@ def handle_post():
 
     file = request.files['file']
     file = Image.open(file)
-    
+
     response_model = make_magic(file)
     return {'status': True, 'message': 'OK',  'payload': response_model}
 
 @app.get("/")
 def handle_get():
     return 'La mejor línea de código es la que no existe. -Elon Musk'
+    
