@@ -2,6 +2,9 @@ from flask import Flask
 from flask import request
 from flask_cors import CORS
 from PIL import Image
+from classifier import Classifier
+
+cls = Classifier('model.trc')
 
 app = Flask(__name__)
 
