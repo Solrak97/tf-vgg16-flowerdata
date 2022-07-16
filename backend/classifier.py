@@ -13,7 +13,7 @@ class Classifier:
         self.device = ('cuda' if torch.cuda.is_available() else 'cpu')
 
         #    Selección de dispositivo
-        self.classes = ('margaritas', 'rosas', 'dientes de león', 'tulipanes', 'girasoles')
+        self.classes = ('Margaritas', 'Rosas', 'Dientes de león', 'Tulipanes', 'Girasoles')
             
         
         self.model = self.load_model(path)
@@ -33,6 +33,8 @@ class Classifier:
         # Load in checkpoint
         checkpoint = torch.load(path, map_location=torch.device('cpu'))
         
+        print(checkpoint.keys())
+
         model = models.vgg16(pretrained=True)
         # Make sure to set parameters as not trainable
         for param in model.parameters():
