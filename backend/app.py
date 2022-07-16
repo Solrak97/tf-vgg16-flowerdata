@@ -4,14 +4,14 @@ from flask_cors import CORS
 from PIL import Image
 from classifier import Classifier
 
-cls = Classifier('model.trc')
+cls = Classifier('classifier.trch')
 
 app = Flask(__name__)
 
 CORS(app)
 
-def make_magic(img):
-    return {'class': 'sunflower', 'accuracy': 95}
+# def make_magic(img):
+#     return {'class': 'sunflower', 'accuracy': 95}
 
 @app.post("/")
 def handle_post():
@@ -21,7 +21,8 @@ def handle_post():
     file = request.files['file']
     file = Image.open(file)
 
-    response_model = make_magic(file)
+
+    response_model = cls.classify(file)
     return {'status': True, 'message': 'OK',  'payload': response_model}
 
 @app.get("/")

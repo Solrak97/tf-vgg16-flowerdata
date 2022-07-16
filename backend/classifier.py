@@ -17,6 +17,7 @@ class Classifier:
             
         
         self.model = self.load_model(path)
+        self.model.eval()
         
 
         # Transformador de datos
@@ -31,23 +32,18 @@ class Classifier:
     def load_model(self, path):
 
         # Load in checkpoint
-        checkpoint = torch.load(path, map_location=torch.device('cpu'))
-        
-        print(checkpoint.keys())
+        state = torch.load(path, map_location=self.device)
 
+        # Non trainable model
         model = models.vgg16(pretrained=True)
-        # Make sure to set parameters as not trainable
         for param in model.parameters():
             param.requires_grad = False
-        model.classifier = checkpoint['classifier']
 
         # Load in the state dict
-        model.load_state_dict(checkpoint['state_dict'])
+        model.classifier = state['classifier']
+        model.load_state_dict(state['state_dict'])
 
-        # Move to device
-        model = model.to(self.device)
-
-        return model
+        return model.to(self.device)
 
 
     def get_metrics():
@@ -59,11 +55,11 @@ class Classifier:
 
     def classify(self, img):
         img = self.transform(img)
-        img = torch.tensor(img).to(self.device)
+        img = img.to(self.device).unsqueeze(0)
 
         pred = self.model(img)
 
         class_label = self.classes[torch.argmax(pred, dim=1)[0]]
-        probs = pred[0]
+        probs = pred[0].detach().numpy()[0]
 
-        return (class_label, probs)
+        return {'class': class_label, 'accuracy': int(probs)}
