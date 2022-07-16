@@ -57,9 +57,14 @@ class Classifier:
         img = self.transform(img)
         img = img.to(self.device).unsqueeze(0)
 
-        pred = self.model(img)
+        pred = F.softmax(self.model(img)[0], dim = 0) * 100
 
-        class_label = self.classes[torch.argmax(pred, dim=1)[0]]
-        probs = pred[0].detach().numpy()[0]
+        print(self.model(img)[0])
+        print(pred)
+        print(torch.argmax(pred))
 
-        return {'class': class_label, 'accuracy': int(probs)}
+
+        class_label = self.classes[torch.argmax(pred)]
+        prob = pred.detach().numpy()[torch.argmax(pred)]
+
+        return {'class': class_label, 'accuracy': int(prob)}
