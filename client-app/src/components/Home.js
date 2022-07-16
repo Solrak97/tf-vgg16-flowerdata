@@ -7,7 +7,7 @@ import Instructions from "./Instructions";
 
 function Home() {
 
-  const [result, setResult] = useState({});
+  const [result, setResult] = useState({ error: 'Error' });
   const [displayedResult, setDisplayResult] = useState(false);
   const [imageUploaded, setImageUploaded] = useState(undefined);
 
