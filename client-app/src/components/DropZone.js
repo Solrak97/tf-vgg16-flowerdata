@@ -23,9 +23,8 @@ function DropZone({setResult, setImageUploaded}) {
   };
 
   const handleResponse = (response) => {
-    const res = response.at(-1).serverResponse;
-    console.log(res);
-    setResult((res.message === 'Error')? {error: 'Error'}: res);
+    const res = response.at(-1).serverResponse;    
+    setResult((Object.keys(res).length === 0 || res.message === 'Error')? {error: 'Error'}: res);
   }
 
   return (
