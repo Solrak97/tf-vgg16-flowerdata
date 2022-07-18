@@ -13,7 +13,7 @@ class Classifier:
         self.device = ('cuda' if torch.cuda.is_available() else 'cpu')
 
         #    Selección de dispositivo
-        self.classes = ('margaritas', 'rosas', 'dientes de león', 'tulipanes', 'girasoles')
+        self.classes = ('margaritas', 'dientes de león', 'rosas', 'girasoles', 'tulipanes')
             
         
         self.model = self.load_model(path)
