@@ -15,6 +15,9 @@
 ### Archivos del repositorio
 
 - VGG_TF.ipynb: notebook del modelo basado en VGG16.
+- backend: carpeta con archivos de backend (Flask).
+- client-app: carpeta con archivos de cliente (React).
+- documentos: carpeta con documento escrito y presentación.
 - README.md: archivo README del proyecto.
 
 ### Sobre este repositorio
