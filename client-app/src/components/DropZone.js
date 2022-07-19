@@ -43,7 +43,7 @@ function DropZone({setResult, setImageUploaded}) {
       header={false}
       footer={false}
       label="Arrastra una imagen"
-      accept="image/*"
+      accept=".jpg"
       url="http://localhost:5000"
       uploadOnDrop
       localization={"ES-es"}
