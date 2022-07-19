@@ -10,11 +10,11 @@ app = Flask(__name__)
 
 CORS(app)
 
-# def make_magic(img):
-#     return {'class': 'sunflower', 'accuracy': 95}
-
 @app.post("/")
 def handle_post():
+    """
+    Handles the POST request from the frontend and returns the prediction.
+    """
     if 'file' not in request.files:
         return {'status': True, 'message': 'Error',  'payload': response_model}
 
@@ -27,5 +27,8 @@ def handle_post():
 
 @app.get("/")
 def handle_get():
-    return 'La mejor línea de código es la que no existe. -Elon Musk'
+    """
+    Handles the GET request
+    """
+    return 'GET'
     
